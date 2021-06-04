@@ -1,0 +1,23 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:auto;
+    height:auto;
+}
+
+.songfinder {
+    margin:15rem;
+    padding:1rem;
+    border:solid 0.5px black;
+    border-radius:10px;
+}
+
+#lyricsArea {
+    max-width: 35ch;
+}
