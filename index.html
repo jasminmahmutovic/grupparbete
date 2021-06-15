@@ -2,23 +2,47 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lyrics finder</title>
 </head>
 <body>
-        <div>
-                <div class="songfinder">
-                    <label for="artist">Name of the artist</label><br>
-                    <input type="text" id="artist" name="artist"><br>
 
-                    <label for="song">Name of the song</label><br>
-                    <input type="text" id="song" name="song"><br><br>
-                    <button id="button">Find my song</button>
+  <!-- Created a banner-container where the 
+        slideshow of the pictures are-->
+     <div class="banner-container">
 
-                    <p id="lyricsArea"></p>
+    <div class="Slideshow-fade">
+      <img src="/images/dua-lipa.jpg" alt="Dua Lipa">
+    </div>
+  
+    <div class="Slideshow-fade">
+      <img src="/images/eminem.jpg"  alt="Eminem">
+    </div>
+  
+    <div class="Slideshow-fade">
+      <img src="/images/billie.jpg" alt="Billie Eilish">
+    </div>
+  </div>
+  <br>
+    <h1 class="main-text">We've got the lyrics you've been looking for!</h1>
+        
+        <!-- Created a div where the websites function is located -->
+          <div class="songfinder">
+            <label for="artist">Name of the artist</label><br>
+            <input type="text" id="artist" name="artist"><br>
+            <br>
+            <label for="song">Name of the song</label><br>
+            <input type="text" id="song" name="song"><br><br>
+            <p id="error">You must type in an artist.</p>
+            <button disabled id="button">Find my lyrics</button>
+            <p id="lyricsArea"></p>
         </div>
+        <!-- javscript container -->
     <script src="main.js"></script>
+    <script src="image-slideshow.js"></script>
 </body>
 </html>

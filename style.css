@@ -1,23 +1,83 @@
+/* Importing slideshow styling */
+@import url(slideshow.css);
+
+/* Removing webbrowsers default styling */
 * {
     margin:0;
     padding:0;
 }
 
 body {
+    width:auto;
+    height:auto;
+    background-color:#d7fcd42d;
+}
+
+.main-text {
     display:flex;
     justify-content: center;
     align-items:center;
-    width:auto;
-    height:auto;
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-size:4rem;
 }
 
+/* Styling of the lyrics area and the button attached to it */
+
 .songfinder {
-    margin:15rem;
+    margin:auto;
+    margin-bottom:1rem;
     padding:1rem;
-    border:solid 0.5px black;
+    width:25%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    font-family: 'Baloo Tammudu 2', cursive;
     border-radius:10px;
 }
 
+textarea:focus,
+input:focus {
+    outline:none;
+}
+
+#artist,
+#song {
+    font-size:1rem;
+    font-family: 'Baloo Tammudu 2', cursive;
+    background-color:#d7fcd400;
+    border:none;
+    border-bottom: 2px solid black;
+}
+
+
 #lyricsArea {
-    max-width: 35ch;
+    max-width: 100ch;
+}
+
+#button {
+    font-family: lato,sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: #6d0000;
+    display: inline-block;
+    padding: 10px 40px 10px 40px;
+    position: relative;
+    border: 3px solid #6d0000;
+    border-radius: 20px;
+}
+
+#button:hover {
+    background-color:#6d0000;
+    color:white;
+}
+
+#button:disabled,
+button[disabled]{
+    color:white;
+    background-color:rgb(216, 207, 207);
+    border: 3px solid rgb(216, 207, 207);
 }

@@ -1,0 +1,13 @@
+/* Styling of the slideshow and the pictures in it */
+
+.banner-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+img {
+    height:90vh;
+    width:100%;
+    object-fit:cover;
+}
