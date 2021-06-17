@@ -1,4 +1,5 @@
 const artist = document.getElementById('artist')
+const songTitle = document.getElementById('song')
 const lyricsButton = document.getElementById('button')
 const lyrics = document.getElementById('lyricsArea')
 const error = document.getElementById("error")
@@ -24,13 +25,14 @@ artist.addEventListener("keyup", function(event){
 
 // Fetch function
 lyricsButton.addEventListener("click", () => {
-
+  
     const inputArtist = artist.value;
     const inputTitle = songTitle.value;
 
-    fetch(`https://api.lyrics.ovh/v1/${inputArtist}/${inputTitle}`).then(function(response){
+
+    fetch(`http://ianertson.com:3500/${inputArtist}/${inputTitle}`).then(function(response){
         response.json().then(data => {
-            document.getElementById("lyricsArea").innerText=data.lyrics
+        document.getElementById("lyricsArea").innerText = data[0].lyrics
         })
     })
 });
