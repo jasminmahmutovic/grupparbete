@@ -5,12 +5,12 @@ const outputText = document.getElementById('lyricsArea')
 const error = document.getElementById("error")
 
 
-function errorMessagesTitle(){ 
+function errorMessages(){ 
   
   if (songTitle.value === '' || songTitle === null) {
-   outputText.innerText = messages = 'You must type in a song title.'
+   outputText.innerText = messages = 'You need to type in a song!'
    return false
-  } 
+  }
   return true
 }
 
@@ -23,7 +23,7 @@ artist.addEventListener("keyup", function(event){
     outputText.innerText= ""
     button.removeAttribute("disabled")
   } else {
-    outputText.innerText= "Button won't work without an Artist "
+    outputText.innerText= "You need an artist!"
     button.setAttribute("disabled",1) 
   }
 })
@@ -31,7 +31,7 @@ artist.addEventListener("keyup", function(event){
 
 // Fetch function
 button.addEventListener("click", () => {
-  const errorMessage = errorMessagesTitle() 
+  const errorMessage = errorMessages() 
   
   
   if( errorMessage === true){
@@ -42,7 +42,7 @@ button.addEventListener("click", () => {
      response.json().then(data => {
        
        if(data.length === 0){
-         outputText.innerText= "uh oh! we couldn't find your lyrics"
+         outputText.innerText= "Your lyrics does not exist."
        } else {
          outputText.innerText = data[0].lyrics
        }
